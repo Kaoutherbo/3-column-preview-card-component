@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+  /* Colors */
+
+    /* Primary */
+
+--Bright-orange: hsl(31, 77%, 52%);
+--Dark-cyan: hsl(184, 100%, 22%);
+--Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral */
+
+--Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+--Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+
+    /* Fonts */
+
+--Font-size: 15px;
+--Font-Family: 'Lexend Deca',sans-serif;
+--Font-Weight-normal: 400;
+
+--Font-Family2: 'Big Shoulders Display',sans-serif;
+--Font-Weight-bold: 700;
+
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Very-light-gray-background-headings-buttons);
+    font-size: var(--Font-size);
+    font-weight: var(--Font-Weight-normal);
+}
+#card{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 860px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+img{
+    width: 25%;
+}
+.one,.two,.three{
+    padding: 2.5rem;
+}
+.one{
+    background-color: var(--Bright-orange);
+    border-radius: 5px 0 0 5px;
+}
+.two{
+    background-color: var(--Dark-cyan);
+}
+.three{
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 5px  5px 0 ;
+}
+h2{
+    color: var(--Very-light-gray-background-headings-buttons);
+    font-size: 2.5rem;
+    font-family: var(--Font-Family2);
+}
+p{
+    color: var(--Transparent-white-paragraphs);
+    font-family: var(--Font-Family);
+    line-height: 1.6rem;
+}
+.btn{
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-family: var(--Font-Family);
+    width: 80%;
+    margin-top: 3rem;
+    font-weight: var(--Font-Weight-bold);
+    cursor: pointer;
+    transition: .3s;
+}
+.btn:hover{
+    border: 2px solid var(--Transparent-white-paragraphs);
+    border-radius: 25px;
+}
+
+.one > .btn{
+    color: var(--Bright-orange);
+}
+.two > .btn{
+    color: var(--Dark-cyan);
+}
+.three > .btn{
+    color: var(--Very-dark-cyan);
+}
+.one > .btn:hover{
+    background-color: var(--Bright-orange);
+    color: var(--Very-light-gray-background-headings-buttons);
+}
+.two > .btn:hover{
+    background-color: var(--Dark-cyan);
+    color: var(--Very-light-gray-background-headings-buttons);
+}
+.three > .btn:hover{
+    background-color: var(--Very-dark-cyan);
+    color: var(--Very-light-gray-background-headings-buttons);
+}
+@media (max-width:650px) {
+    #card{
+        flex-direction: column;
+        width: 90%;
+    }
+    
+}

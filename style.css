@@ -35,12 +35,10 @@ body{
     background-color: var(--Very-light-gray-background-headings-buttons);
     font-size: var(--Font-size);
     font-weight: var(--Font-Weight-normal);
+    display: grid;
+    place-items: center;
 }
 #card{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     width: 860px;
     height: 500px;
     display: flex;
@@ -50,22 +48,21 @@ section{
     display: flex;
     flex-direction: column;
     gap: 2rem;
-
 }
 img{
     width: 25%;
 }
-.one,.two,.three{
+.sedans,.suvs,.luxury{
     padding: 2.5rem;
 }
-.one{
+.sedans{
     background-color: var(--Bright-orange);
     border-radius: 5px 0 0 5px;
 }
-.two{
+.suvs{
     background-color: var(--Dark-cyan);
 }
-.three{
+.luxury{
     background-color: var(--Very-dark-cyan);
     border-radius: 0 5px  5px 0 ;
 }
@@ -89,37 +86,45 @@ p{
     font-weight: var(--Font-Weight-bold);
     cursor: pointer;
     transition: .3s;
+    border: 2px solid transparent;
 }
 .btn:hover{
     border: 2px solid var(--Transparent-white-paragraphs);
     border-radius: 25px;
 }
 
-.one > .btn{
+.sedans > .btn{
     color: var(--Bright-orange);
 }
-.two > .btn{
+.suvs > .btn{
     color: var(--Dark-cyan);
 }
-.three > .btn{
+.luxury > .btn{
     color: var(--Very-dark-cyan);
 }
-.one > .btn:hover{
+.sedans > .btn:hover{
     background-color: var(--Bright-orange);
     color: var(--Very-light-gray-background-headings-buttons);
 }
-.two > .btn:hover{
+.suvs > .btn:hover{
     background-color: var(--Dark-cyan);
     color: var(--Very-light-gray-background-headings-buttons);
 }
-.three > .btn:hover{
+.luxury > .btn:hover{
     background-color: var(--Very-dark-cyan);
     color: var(--Very-light-gray-background-headings-buttons);
 }
+
 @media (max-width:650px) {
     #card{
         flex-direction: column;
         width: 90%;
+    }
+    .sedans{
+        border-radius: 5px  5px 0 0;
+    }
+    .luxury{
+        border-radius: 0 0 5px 5px;
     }
     
 }
